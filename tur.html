@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aksa Turu &amp; Harita — Beytülmakdis Yolculuğu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap top-row">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">🕌</span>
+      <div><h1>Beytülmakdis Yolculuğu</h1><span>Tarihi, mimarisi ve manevi mirasıyla tanıyoruz</span></div>
+    </a>
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <div class="tier-picker" id="tierPicker"></div>
+      <a class="support-btn" href="#" target="_blank" rel="noopener">☕ Bizi Destekle</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <nav class="sections">
+      <a class="tab" href="index.html">Ana Sayfa</a>
+      <a class="tab" href="tarih.html">Tarih Yolculuğu</a>
+      <a class="tab active" href="tur.html">Aksa Turu &amp; Harita</a>
+      <a class="tab" href="peygamberler.html">Peygamberler</a>
+      <a class="tab" href="oyunlar.html">Oyunlar</a>
+      <a class="tab" href="hikayeler.html">Hikayeler</a>
+      <a class="tab" href="sozluk.html">Sözlük</a>
+      <a class="tab" href="boyama.html">Boyama</a>
+      <a class="tab" href="videolar.html">Video Dersler</a>
+      <a class="tab" href="rehber.html">Ebeveyn &amp; Öğretmen</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="section-head">
+    <span class="eyebrow-tag">Sanal Gezinti</span>
+    <h2>Mescid-i Aksa Turu</h2>
+    <p class="lead">Aşağıdaki illüstre haritada bir noktaya dokun, o köşe hakkında bilgi edin.</p>
+  </div>
+
+  <!-- Gizli harita şablonu: avlu zemini, dış duvar, yön oku (geçerli SVG bağlamında, namespace sorunu olmasın diye) -->
+  <svg id="mapBase" style="display:none;" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="10" width="360" height="290" rx="16" fill="#EAD9A6" stroke="var(--teal-deep)" stroke-width="4"/>
+    <rect x="45" y="30" width="310" height="250" rx="10" fill="#F3E6BE" stroke="var(--gold-soft)" stroke-width="2" stroke-dasharray="4 6"/>
+    <circle cx="200" cy="120" r="34" fill="var(--gold-soft)" opacity="0.5"/>
+    <rect x="150" y="230" width="100" height="55" rx="6" fill="var(--teal)" opacity="0.35"/>
+    <circle cx="90" cy="190" r="22" fill="var(--olive)" opacity="0.35"/>
+    <circle cx="310" cy="190" r="22" fill="var(--olive)" opacity="0.35"/>
+    <rect x="170" y="20" width="60" height="20" rx="4" fill="var(--terracotta)" opacity="0.35"/>
+  </svg>
+
+  <div class="map-wrap">
+    <svg id="mapSvg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; display:block;"></svg>
+  </div>
+  <div class="map-pop" id="mapPop"></div>
+  <div class="map-legend">📍 Noktalara dokunarak ya da tıklayarak keşfet — her nokta gerçek bir bölümü temsil eden özgün bir çizimdir.</div>
+
+  <div class="divider-stars"><span class="line"></span><span>✦</span><span class="line"></span></div>
+
+  <h3>Durak Kartları</h3>
+  <div class="card-grid" id="tourGrid"></div>
+
+  <div class="cta-row" style="margin-top:30px;">
+    <a class="btn btn-primary" href="peygamberler.html">Sıradaki durak: Peygamberler →</a>
+  </div>
+</main>
+
+<footer>Beytülmakdis Yolculuğu · Çocuklar ve gençler için hazırlanmış bir eğitim projesidir 🌿</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<script>
+  function renderTourPage(){ renderMap(); renderTourCards(); }
+  bootPage('tour', renderTourPage);
+</script>
+</body>
+</html>

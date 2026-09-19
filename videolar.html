@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Dersler — Beytülmakdis Yolculuğu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap top-row">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">🕌</span>
+      <div><h1>Beytülmakdis Yolculuğu</h1><span>Tarihi, mimarisi ve manevi mirasıyla tanıyoruz</span></div>
+    </a>
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <div class="tier-picker" id="tierPicker"></div>
+      <a class="support-btn" href="#" target="_blank" rel="noopener">☕ Bizi Destekle</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <nav class="sections">
+      <a class="tab" href="index.html">Ana Sayfa</a>
+      <a class="tab" href="tarih.html">Tarih Yolculuğu</a>
+      <a class="tab" href="tur.html">Aksa Turu &amp; Harita</a>
+      <a class="tab" href="peygamberler.html">Peygamberler</a>
+      <a class="tab" href="oyunlar.html">Oyunlar</a>
+      <a class="tab" href="hikayeler.html">Hikayeler</a>
+      <a class="tab" href="sozluk.html">Sözlük</a>
+      <a class="tab" href="boyama.html">Boyama</a>
+      <a class="tab active" href="videolar.html">Video Dersler</a>
+      <a class="tab" href="rehber.html">Ebeveyn &amp; Öğretmen</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="section-head">
+    <span class="eyebrow-tag">Yakında</span>
+    <h2>Video Dersler</h2>
+    <p class="lead">Aşağıdaki dersler yakında bu alanda yayınlanacak. Şimdilik başlıkları ve içeriklerini önizleyebilirsin.</p>
+  </div>
+
+  <div class="video-grid" id="videoGrid"></div>
+
+  <div class="guide-block" style="margin-top:26px;">
+    <h3>📌 Site sahibi için not</h3>
+    <p style="color:var(--ink-soft); margin:0;">Bir video hazır olduğunda, ilgili karta tıklama linkini eklemek için <code>videolar.html</code> dosyasındaki video kartına bir <code>&lt;a&gt;</code> etiketi sarmalayıp YouTube linkine yönlendirebilir ya da kartın içine bir YouTube <code>&lt;iframe&gt;</code> gömebilirsin. <code>assets/data.js</code> içindeki <code>VIDEO_LESSONS</code> listesine yeni ders eklemen yeterli.</p>
+  </div>
+
+  <div class="cta-row" style="margin-top:30px;">
+    <a class="btn btn-primary" href="rehber.html">Sıradaki durak: Ebeveyn &amp; Öğretmen →</a>
+  </div>
+</main>
+
+<footer>Beytülmakdis Yolculuğu · Çocuklar ve gençler için hazırlanmış bir eğitim projesidir 🌿</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<script>
+  bootPage('videos', renderVideos);
+</script>
+</body>
+</html>

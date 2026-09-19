@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beytülmakdis Yolculuğu — Ana Sayfa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap top-row">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">🕌</span>
+      <div><h1>Beytülmakdis Yolculuğu</h1><span>Tarihi, mimarisi ve manevi mirasıyla tanıyoruz</span></div>
+    </a>
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <div class="tier-picker" id="tierPicker"></div>
+      <a class="support-btn" href="#" target="_blank" rel="noopener">☕ Bizi Destekle</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <nav class="sections">
+      <a class="tab active" href="index.html">Ana Sayfa</a>
+      <a class="tab" href="tarih.html">Tarih Yolculuğu</a>
+      <a class="tab" href="tur.html">Aksa Turu &amp; Harita</a>
+      <a class="tab" href="peygamberler.html">Peygamberler</a>
+      <a class="tab" href="oyunlar.html">Oyunlar</a>
+      <a class="tab" href="hikayeler.html">Hikayeler</a>
+      <a class="tab" href="sozluk.html">Sözlük</a>
+      <a class="tab" href="boyama.html">Boyama</a>
+      <a class="tab" href="videolar.html">Video Dersler</a>
+      <a class="tab" href="rehber.html">Ebeveyn &amp; Öğretmen</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-hero">
+    <div class="page-hero-text">
+      <span class="eyebrow-tag">Hoş geldin</span>
+      <h2 id="homeHeadline">Beytülmakdis'i birlikte keşfedelim</h2>
+      <p id="homeLead">Tarihini, peygamberlerle bağını ve mimarisini eğlenceli bir gezintiyle öğren.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tarih.html">Yolculuğa başla</a>
+        <a class="btn btn-ghost" href="oyunlar.html">Oyunlara git</a>
+      </div>
+    </div>
+    <div class="page-hero-art">
+      <svg viewBox="0 0 220 220" width="100%" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="110" cy="205" rx="90" ry="8" fill="var(--sand-2)"/>
+        <rect x="55" y="120" width="110" height="75" rx="4" fill="var(--card)" stroke="var(--teal-deep)" stroke-width="3"/>
+        <path d="M75 120 a 15 20 0 0 1 30 0" fill="none" stroke="var(--teal-deep)" stroke-width="3"/>
+        <path d="M115 120 a 15 20 0 0 1 30 0" fill="none" stroke="var(--teal-deep)" stroke-width="3"/>
+        <rect x="30" y="150" width="26" height="45" fill="var(--card)" stroke="var(--teal-deep)" stroke-width="3"/>
+        <rect x="164" y="150" width="26" height="45" fill="var(--card)" stroke="var(--teal-deep)" stroke-width="3"/>
+        <path d="M60 120 Q110 40 160 120 Z" fill="var(--gold)" stroke="var(--gold-soft)" stroke-width="2"/>
+        <rect x="105" y="18" width="10" height="24" fill="var(--gold-soft)"/>
+        <circle cx="110" cy="16" r="6" fill="var(--gold-soft)"/>
+        <path d="M32 150 Q43 130 56 150 Z" fill="var(--gold)"/>
+        <path d="M166 150 Q177 130 190 150 Z" fill="var(--gold)"/>
+      </svg>
+    </div>
+  </div>
+
+  <h3 style="margin-top:10px;">Kaç yaşındasın?</h3>
+  <div class="age-grid" id="ageGrid"></div>
+
+  <div class="divider-stars"><span class="line"></span><span>✦</span><span class="line"></span></div>
+
+  <div class="card-grid">
+    <div class="info-card"><div class="emoji">🕰️</div><h3>Tarih Yolculuğu</h3><p>Hz. Süleyman'dan günümüze zaman tünelinde altı önemli durak.</p></div>
+    <div class="info-card"><div class="emoji">🗺️</div><h3>Aksa Turu &amp; Harita</h3><p>İllüstre haritada Mescid-i Aksa'nın önemli köşelerini keşfet.</p></div>
+    <div class="info-card"><div class="emoji">🎮</div><h3>Oyunlar</h3><p>Bilgi yarışması, hafıza oyunu ve doğru/yanlış turu ile öğren.</p></div>
+    <div class="info-card"><div class="emoji">📖</div><h3>Hikayeler &amp; Sözlük</h3><p>Yaşına özel hikayeler ve terimler sözlüğü.</p></div>
+  </div>
+
+  <div class="progress-strip">
+    <div style="flex:0 0 auto; font-weight:700;">İlerlemen</div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="stars" id="starsText">⭐ 0 doğru cevap</div>
+  </div>
+</main>
+
+<footer>Beytülmakdis Yolculuğu · Çocuklar ve gençler için hazırlanmış bir eğitim projesidir 🌿</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<script>
+  function renderHome(){
+    document.getElementById('homeHeadline').textContent = HOME_TEXT[state.tier].h;
+    document.getElementById('homeLead').textContent = HOME_TEXT[state.tier].l;
+  }
+  buildAgeGrid();
+  bootPage('home', renderHome);
+</script>
+</body>
+</html>

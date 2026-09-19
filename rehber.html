@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ebeveyn &amp; Öğretmen Rehberi — Beytülmakdis Yolculuğu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap top-row">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">🕌</span>
+      <div><h1>Beytülmakdis Yolculuğu</h1><span>Tarihi, mimarisi ve manevi mirasıyla tanıyoruz</span></div>
+    </a>
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <div class="tier-picker" id="tierPicker"></div>
+      <a class="support-btn" href="#" target="_blank" rel="noopener">☕ Bizi Destekle</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <nav class="sections">
+      <a class="tab" href="index.html">Ana Sayfa</a>
+      <a class="tab" href="tarih.html">Tarih Yolculuğu</a>
+      <a class="tab" href="tur.html">Aksa Turu &amp; Harita</a>
+      <a class="tab" href="peygamberler.html">Peygamberler</a>
+      <a class="tab" href="oyunlar.html">Oyunlar</a>
+      <a class="tab" href="hikayeler.html">Hikayeler</a>
+      <a class="tab" href="sozluk.html">Sözlük</a>
+      <a class="tab" href="boyama.html">Boyama</a>
+      <a class="tab" href="videolar.html">Video Dersler</a>
+      <a class="tab active" href="rehber.html">Ebeveyn &amp; Öğretmen</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="section-head">
+    <span class="eyebrow-tag">Rehberlik</span>
+    <h2>Ebeveyn &amp; Öğretmen Rehberi</h2>
+    <p class="lead">Seçtiğin yaş grubuna göre sohbet soruları ve sınıf/ev etkinlik önerileri. Yukarıdaki yaş rozetlerinden değiştirebilirsin.</p>
+  </div>
+  <div id="guideBox"></div>
+
+  <div class="guide-block">
+    <h3>🌱 Genel Yaklaşım Önerisi</h3>
+    <ul>
+      <li>Bilgiyi ezberletmek yerine merak uyandırmayı hedefleyin.</li>
+      <li>Çocuğun sorularını "bilmiyorum, birlikte araştıralım" diyerek karşılamaktan çekinmeyin.</li>
+      <li>Güncel siyasi meseleleri, çocuğun yaşına ve olgunluğuna göre ayrı ve dengeli kaynaklarla, ailenin kendi değerlendirmesiyle ele alın; bu site tarihi ve manevi mirasa odaklanır.</li>
+    </ul>
+  </div>
+
+  <div class="cta-row" style="margin-top:10px;">
+    <a class="btn btn-primary" href="index.html">Ana sayfaya dön</a>
+  </div>
+</main>
+
+<footer>Beytülmakdis Yolculuğu · Çocuklar ve gençler için hazırlanmış bir eğitim projesidir 🌿</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<script>
+  bootPage('guide', renderGuide);
+</script>
+</body>
+</html>
